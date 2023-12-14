@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/components/baoSection.module.scss'
 import Button from '../Button/Button'
 
-export default function BaoSecction() {
+export default function BaoSection() {
   return (
     <div className={styles.bao__section}>
       <div className={styles.bao__section__left}>

@@ -5,6 +5,7 @@
 - cards mobile
 - fix padding all around
 - fix margins all around
+- fix spacing between elements, they are too cramped between sections
 
 # Features
 - link up nav icons
