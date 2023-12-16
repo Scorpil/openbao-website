@@ -10,7 +10,13 @@ export default function LogoCardGroup(cards: Props) {
   return (
     <div className={styles.logo__card__group}>
       {cards.cards.map(card => {
-        return <LogoCard title={card.title} description={card.description} />
+        return (
+          <LogoCard
+            key={card.title}
+            title={card.title}
+            description={card.description}
+          />
+        )
       })}
     </div>
   )

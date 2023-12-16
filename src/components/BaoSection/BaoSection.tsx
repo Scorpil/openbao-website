@@ -25,7 +25,11 @@ export default function BaoSection() {
           alt="secret"
           width={819}
           height={630}
-          layout="responsive"
+          sizes="100vw"
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
         />
       </div>
     </div>
