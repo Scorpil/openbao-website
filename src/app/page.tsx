@@ -6,6 +6,8 @@ import style from '@/styles/components/layout/layout.module.scss'
 import BaoSection from '@/components/BaoSection/BaoSection'
 import { cardGroupItems } from '@/constants/cardGroupItems'
 import FAQSection from '@/components/FAQSection/FAQSection'
+import LogoCardGroup from '@/components/LogoCardGroup/LogoCardGroup'
+import SupportSection from '@/components/SuipportSection/SupportSection'
 export default function Home() {
   return (
     <>
@@ -28,8 +30,8 @@ export default function Home() {
         <FAQSection />
       </section>
       <div className="container">
-        <section className="mt-xxl">
-          <h2 className="main__title__h2">Who supports us?</h2>
+        <section>
+          <SupportSection />
         </section>
       </div>
     </>
