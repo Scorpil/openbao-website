@@ -7,6 +7,7 @@
 - fix margins all around
 - fix spacing between elements, they are too cramped between sections
 - consolidate css files and organize them better, currently a little chaotic
+- replace inline styles in icon.tsx with css classes
 
 # Features
 - link up nav icons
