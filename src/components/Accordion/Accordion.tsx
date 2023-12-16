@@ -1,26 +1,29 @@
 'use client'
 import React, { useState } from 'react'
 import styles from '@/styles/components/accordion.module.scss'
+import { AccordionItem } from '@/types/accordion'
 
-interface Item {
-  title: string
-  description: string
-}
-
-export default function Accordion(item: Item) {
+export default function Accordion(item: AccordionItem) {
   const [isExpanded, setIsExpanded] = useState<boolean>(false)
   return (
     <>
-      <div className={styles.accordion__item}>
+      <div
+        className={styles.accordion__item}
+        onClick={() => setIsExpanded(previsExpanded => !previsExpanded)}
+      >
         <div
           className={styles.accordion__item__title}
-          onClick={() => setIsExpanded(previsExpanded => !previsExpanded)}
+          aria-expanded={isExpanded}
+          aria-label={(isExpanded ? 'hide ' : 'show ') + item.description}
         >
-          {item.title}
+          <h3>{item.title}</h3>
+          <h3 className={styles.accordion__item__trigger}>
+            {isExpanded ? '-' : '+'}
+          </h3>
         </div>
         {isExpanded ? (
           <div className={styles.accordion__item__description}>
-            {item.description}
+            <p>{item.description}</p>
           </div>
         ) : null}
       </div>

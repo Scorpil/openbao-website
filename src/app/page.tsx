@@ -24,9 +24,14 @@ export default function Home() {
           <BaoSection />
         </section>
       </div>
-      <section>
+      <section className={'pb-0'}>
         <FAQSection />
       </section>
+      <div className="container">
+        <section className="mt-xxl">
+          <h2 className="main__title__h2">Who supports us?</h2>
+        </section>
+      </div>
     </>
   )
 }
