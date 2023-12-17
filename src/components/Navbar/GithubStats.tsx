@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '@/styles/components/navbar/githubStats.module.scss';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-export default async function NavbarSocial() {
+export default async function GithubStats() {
   const repo = "openbao/openbao"
   const { stargazers_count: stars } = await fetch(
     `https://api.github.com/repos/${repo}`,
