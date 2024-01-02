@@ -1,17 +1,23 @@
 'use client'
-import React, { useState } from 'react'
 import styles from '@/styles/components/navbar/navbar.module.scss'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react'
 import NavbarItems from './NavbarItems'
 import NavbarSocial from './NavbarSocial'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbar__content}>
+      <div
+        className={
+          isNavOpen
+            ? `${styles.navbar__content} ${styles.navbar__content__active}`
+            : `${styles.navbar__content}`
+        }
+      >
         <div className={styles.navbar__navigation__wrapper}>
           <div className={styles.navbar__logo}>
             <span>OpenBao</span>
@@ -27,13 +33,10 @@ export default function Navbar() {
       <button
         onClick={() => setIsNavOpen(!isNavOpen)}
         className={styles.navbar__toggle}
+        aria-expanded={isNavOpen}
       >
         <FontAwesomeIcon width={20} height={20} icon={faBars} />
       </button>
     </nav>
   )
 }
-
-// todo -- logo to the left always
-// background
-//animation

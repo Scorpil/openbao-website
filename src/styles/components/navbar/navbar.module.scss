@@ -71,8 +71,13 @@
   }
 
   .navbar__content {
+    display: none;
     flex-wrap: wrap;
     flex-direction: column;
+  }
+
+  .navbar__content__active {
+    display: flex;
   }
 
   .navbar__menu {
@@ -85,7 +90,7 @@
       flex: 1 1 100%;
       margin-top: var(--margin-md);
       li {
-      padding: var(--padding-sm)
+        padding: var(--padding-sm)
 
       }
     }
@@ -100,6 +105,9 @@
 
   .navbar__toggle {
     display: block;
+    position: absolute;
+    right: var(--margin-md);
+    top: var(--margin-md);
     font-size: var(--font-size-md);
     font-weight: bold;
     color: var(--primary-color);
